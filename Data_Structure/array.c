@@ -19,10 +19,15 @@ int main() {
     printf("Enter the position of delete element: ");
     scanf("%d", &position);
 
-    for(int i = position; i < n; i++){
-        ara[i] = ara[i + 1];
+    if(position <= n && position >= 0){
+        for(int i = position; i < n; i++){
+            ara[i] = ara[i + 1];
+        }
+        n--;
     }
-    n--;
+    else{
+        printf("%d out of index in array... \n", position);
+    }
     int length = sizeof(ara) / sizeof(ara[0]);
     for(int i = 0; i < n; i++){
         printf("%d \n", ara[i]);
