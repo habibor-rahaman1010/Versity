@@ -1,4 +1,4 @@
-// string in c program...
+// for loop drive on string
 
 #include <stdio.h>
 
@@ -8,7 +8,7 @@ int main(void){
     int size = sizeof(name) / sizeof(name[0]);
 
     for(int i = 0; i < size; i++){
-        printf("%c ", name[i]);
+        printf("%s ", name[i]);
     }
     return 0;
 }
