@@ -27,26 +27,35 @@ class Student{
             for(int i = 0; i < 5; i++){ 
                 cout<<this->course[i] <<" ";
             }
-            cout<<"Id: " <<this->section <<endl;
+            cout<<endl;
+            cout<<"Id: " <<this->section <<endl <<endl;
         }
 };
 
 int main(){
-    int id, name, section;
+    string id;
+    string name;
     string courses[5];
+    string section;
+    cout <<"\n---------------"<<"Enter Your Student Input"<<"------------------------" <<endl;
     cout<<"Enter your id: ";
-    cin>>id;
+    getline(cin, id);
 
     cout<<"Enter your name: ";
-    cin>>name;
+    getline(cin, name);
 
     for(int i = 0; i < 5; i++){
-        cout<<"Enter your courses name-%d: " <<i + 1;
-        cin>>courses[i];
+        cout<<"Enter your courses name - " <<i + 1 <<" ";
+        getline(cin, courses[i]);
     }
+    cout<<"Enter your section name: ";
+    getline(cin, section);
 
     Student habib;
-    
+    habib.TakeStudentDetails(stoi(id), name, courses, section);
+
+    cout <<"\n\n---------------"<<"Here Your Studetn Information"<<"------------------------\n";
+    habib.ShowStudentDetails();
 
 return 0;
 }
