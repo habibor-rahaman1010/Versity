@@ -1,6 +1,7 @@
 **/.vs
 **/bin
 **/obj
+**/packages
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/c,c++,windows
