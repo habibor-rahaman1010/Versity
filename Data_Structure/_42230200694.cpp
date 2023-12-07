@@ -25,7 +25,8 @@ public:
         Node* newNode = new Node(value);
         if (isEmpty()) {
             front = rear = newNode;
-        } else {
+        } 
+        else {
             rear->next = newNode;
             rear = newNode;
         }
